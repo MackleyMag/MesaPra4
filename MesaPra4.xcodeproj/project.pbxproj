@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE0023602C2F2B8E00EAD0F8 /* MesaPra4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00235F2C2F2B8E00EAD0F8 /* MesaPra4App.swift */; };
+		AE0023622C2F2B8E00EAD0F8 /* DiningTableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023612C2F2B8E00EAD0F8 /* DiningTableListView.swift */; };
+		AE0023642C2F2B9000EAD0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0023632C2F2B9000EAD0F8 /* Assets.xcassets */; };
+		AE0023672C2F2B9000EAD0F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0023662C2F2B9000EAD0F8 /* Preview Assets.xcassets */; };
+		AE00236F2C2F39CD00EAD0F8 /* DiningTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00236E2C2F39CD00EAD0F8 /* DiningTable.swift */; };
+		AE0023722C2F3A6600EAD0F8 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023712C2F3A6600EAD0F8 /* Color+Hex.swift */; };
+		AE0023752C2F3A9600EAD0F8 /* UIColor+Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023742C2F3A9600EAD0F8 /* UIColor+Exension.swift */; };
+		AE0023782C2F3D3D00EAD0F8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023772C2F3D3D00EAD0F8 /* PreviewContainer.swift */; };
+		AE00237A2C2F3D6A00EAD0F8 /* DiningTableExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023792C2F3D6A00EAD0F8 /* DiningTableExamples.swift */; };
+		AE00237C2C2F3EE500EAD0F8 /* DiningTableListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00237B2C2F3EE500EAD0F8 /* DiningTableListComponent.swift */; };
+		AE00237E2C31D55900EAD0F8 /* OpenDiningTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00237D2C31D55900EAD0F8 /* OpenDiningTable.swift */; };
+		AE0023802C32453C00EAD0F8 /* NewDiningTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00237F2C32453C00EAD0F8 /* NewDiningTableView.swift */; };
+		AE0023822C347DEE00EAD0F8 /* DiningItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023812C347DEE00EAD0F8 /* DiningItem.swift */; };
+		AE0023842C3480DC00EAD0F8 /* PersonInTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023832C3480DC00EAD0F8 /* PersonInTable.swift */; };
+		AE0023862C36023600EAD0F8 /* NewDiningItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023852C36023600EAD0F8 /* NewDiningItemView.swift */; };
+		AE0023882C3711B200EAD0F8 /* MultiSelectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023872C3711B200EAD0F8 /* MultiSelectPickerView.swift */; };
+		AE00238A2C37168100EAD0F8 /* PersonInTableExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023892C37168100EAD0F8 /* PersonInTableExamples.swift */; };
+		AE00238C2C37179200EAD0F8 /* ItemInTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00238B2C37179200EAD0F8 /* ItemInTable.swift */; };
+		AE00238F2C37483200EAD0F8 /* OpenDiningTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00238E2C37483200EAD0F8 /* OpenDiningTableItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE00235C2C2F2B8E00EAD0F8 /* MesaPra4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MesaPra4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE00235F2C2F2B8E00EAD0F8 /* MesaPra4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesaPra4App.swift; sourceTree = "<group>"; };
+		AE0023612C2F2B8E00EAD0F8 /* DiningTableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningTableListView.swift; sourceTree = "<group>"; };
+		AE0023632C2F2B9000EAD0F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE0023662C2F2B9000EAD0F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AE00236E2C2F39CD00EAD0F8 /* DiningTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningTable.swift; sourceTree = "<group>"; };
+		AE0023712C2F3A6600EAD0F8 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		AE0023742C2F3A9600EAD0F8 /* UIColor+Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Exension.swift"; sourceTree = "<group>"; };
+		AE0023772C2F3D3D00EAD0F8 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		AE0023792C2F3D6A00EAD0F8 /* DiningTableExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningTableExamples.swift; sourceTree = "<group>"; };
+		AE00237B2C2F3EE500EAD0F8 /* DiningTableListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningTableListComponent.swift; sourceTree = "<group>"; };
+		AE00237D2C31D55900EAD0F8 /* OpenDiningTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDiningTable.swift; sourceTree = "<group>"; };
+		AE00237F2C32453C00EAD0F8 /* NewDiningTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiningTableView.swift; sourceTree = "<group>"; };
+		AE0023812C347DEE00EAD0F8 /* DiningItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningItem.swift; sourceTree = "<group>"; };
+		AE0023832C3480DC00EAD0F8 /* PersonInTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInTable.swift; sourceTree = "<group>"; };
+		AE0023852C36023600EAD0F8 /* NewDiningItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiningItemView.swift; sourceTree = "<group>"; };
+		AE0023872C3711B200EAD0F8 /* MultiSelectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectPickerView.swift; sourceTree = "<group>"; };
+		AE0023892C37168100EAD0F8 /* PersonInTableExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInTableExamples.swift; sourceTree = "<group>"; };
+		AE00238B2C37179200EAD0F8 /* ItemInTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInTable.swift; sourceTree = "<group>"; };
+		AE00238E2C37483200EAD0F8 /* OpenDiningTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDiningTableItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE0023592C2F2B8E00EAD0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE0023532C2F2B8E00EAD0F8 = {
+			isa = PBXGroup;
+			children = (
+				AE00235E2C2F2B8E00EAD0F8 /* MesaPra4 */,
+				AE00235D2C2F2B8E00EAD0F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE00235D2C2F2B8E00EAD0F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE00235C2C2F2B8E00EAD0F8 /* MesaPra4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE00235E2C2F2B8E00EAD0F8 /* MesaPra4 */ = {
+			isa = PBXGroup;
+			children = (
+				AE0023922C3DB20D00EAD0F8 /* PeopleView */,
+				AE0023912C3DB20700EAD0F8 /* ItemView */,
+				AE0023902C3DB1F600EAD0F8 /* TableView */,
+				AE00238D2C37481000EAD0F8 /* OpenDiningTable */,
+				AE00236D2C2F394600EAD0F8 /* Models */,
+				AE00235F2C2F2B8E00EAD0F8 /* MesaPra4App.swift */,
+				AE0023632C2F2B9000EAD0F8 /* Assets.xcassets */,
+				AE0023702C2F3A5600EAD0F8 /* Extensions */,
+				AE0023762C2F3D2500EAD0F8 /* Preview helpers */,
+				AE0023652C2F2B9000EAD0F8 /* Preview Content */,
+				AE0023872C3711B200EAD0F8 /* MultiSelectPickerView.swift */,
+			);
+			path = MesaPra4;
+			sourceTree = "<group>";
+		};
+		AE0023652C2F2B9000EAD0F8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AE0023662C2F2B9000EAD0F8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE00236D2C2F394600EAD0F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE00236E2C2F39CD00EAD0F8 /* DiningTable.swift */,
+				AE0023812C347DEE00EAD0F8 /* DiningItem.swift */,
+				AE0023832C3480DC00EAD0F8 /* PersonInTable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE0023702C2F3A5600EAD0F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE0023712C2F3A6600EAD0F8 /* Color+Hex.swift */,
+				AE0023742C2F3A9600EAD0F8 /* UIColor+Exension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE0023762C2F3D2500EAD0F8 /* Preview helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AE0023772C2F3D3D00EAD0F8 /* PreviewContainer.swift */,
+				AE0023792C2F3D6A00EAD0F8 /* DiningTableExamples.swift */,
+				AE0023892C37168100EAD0F8 /* PersonInTableExamples.swift */,
+				AE00238B2C37179200EAD0F8 /* ItemInTable.swift */,
+			);
+			path = "Preview helpers";
+			sourceTree = "<group>";
+		};
+		AE00238D2C37481000EAD0F8 /* OpenDiningTable */ = {
+			isa = PBXGroup;
+			children = (
+				AE00237D2C31D55900EAD0F8 /* OpenDiningTable.swift */,
+				AE00238E2C37483200EAD0F8 /* OpenDiningTableItem.swift */,
+			);
+			path = OpenDiningTable;
+			sourceTree = "<group>";
+		};
+		AE0023902C3DB1F600EAD0F8 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				AE00237F2C32453C00EAD0F8 /* NewDiningTableView.swift */,
+				AE00237B2C2F3EE500EAD0F8 /* DiningTableListComponent.swift */,
+				AE0023612C2F2B8E00EAD0F8 /* DiningTableListView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		AE0023912C3DB20700EAD0F8 /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				AE0023852C36023600EAD0F8 /* NewDiningItemView.swift */,
+			);
+			path = ItemView;
+			sourceTree = "<group>";
+		};
+		AE0023922C3DB20D00EAD0F8 /* PeopleView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PeopleView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE00235B2C2F2B8E00EAD0F8 /* MesaPra4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE00236A2C2F2B9000EAD0F8 /* Build configuration list for PBXNativeTarget "MesaPra4" */;
+			buildPhases = (
+				AE0023582C2F2B8E00EAD0F8 /* Sources */,
+				AE0023592C2F2B8E00EAD0F8 /* Frameworks */,
+				AE00235A2C2F2B8E00EAD0F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MesaPra4;
+			productName = MesaPra4;
+			productReference = AE00235C2C2F2B8E00EAD0F8 /* MesaPra4.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE0023542C2F2B8E00EAD0F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AE00235B2C2F2B8E00EAD0F8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = AE0023572C2F2B8E00EAD0F8 /* Build configuration list for PBXProject "MesaPra4" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "pt-BR";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"pt-BR",
+			);
+			mainGroup = AE0023532C2F2B8E00EAD0F8;
+			productRefGroup = AE00235D2C2F2B8E00EAD0F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE00235B2C2F2B8E00EAD0F8 /* MesaPra4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE00235A2C2F2B8E00EAD0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0023672C2F2B9000EAD0F8 /* Preview Assets.xcassets in Resources */,
+				AE0023642C2F2B9000EAD0F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE0023582C2F2B8E00EAD0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0023842C3480DC00EAD0F8 /* PersonInTable.swift in Sources */,
+				AE00237E2C31D55900EAD0F8 /* OpenDiningTable.swift in Sources */,
+				AE00237C2C2F3EE500EAD0F8 /* DiningTableListComponent.swift in Sources */,
+				AE0023782C2F3D3D00EAD0F8 /* PreviewContainer.swift in Sources */,
+				AE0023862C36023600EAD0F8 /* NewDiningItemView.swift in Sources */,
+				AE0023752C2F3A9600EAD0F8 /* UIColor+Exension.swift in Sources */,
+				AE00238A2C37168100EAD0F8 /* PersonInTableExamples.swift in Sources */,
+				AE00238F2C37483200EAD0F8 /* OpenDiningTableItem.swift in Sources */,
+				AE0023882C3711B200EAD0F8 /* MultiSelectPickerView.swift in Sources */,
+				AE00236F2C2F39CD00EAD0F8 /* DiningTable.swift in Sources */,
+				AE0023622C2F2B8E00EAD0F8 /* DiningTableListView.swift in Sources */,
+				AE00238C2C37179200EAD0F8 /* ItemInTable.swift in Sources */,
+				AE0023822C347DEE00EAD0F8 /* DiningItem.swift in Sources */,
+				AE0023602C2F2B8E00EAD0F8 /* MesaPra4App.swift in Sources */,
+				AE00237A2C2F3D6A00EAD0F8 /* DiningTableExamples.swift in Sources */,
+				AE0023722C2F3A6600EAD0F8 /* Color+Hex.swift in Sources */,
+				AE0023802C32453C00EAD0F8 /* NewDiningTableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AE0023682C2F2B9000EAD0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE0023692C2F2B9000EAD0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE00236B2C2F2B9000EAD0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MesaPra4/Preview Content\"";
+				DEVELOPMENT_TEAM = 385SHXWC44;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mackley.MesaPra4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE00236C2C2F2B9000EAD0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MesaPra4/Preview Content\"";
+				DEVELOPMENT_TEAM = 385SHXWC44;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mackley.MesaPra4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE0023572C2F2B8E00EAD0F8 /* Build configuration list for PBXProject "MesaPra4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE0023682C2F2B9000EAD0F8 /* Debug */,
+				AE0023692C2F2B9000EAD0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE00236A2C2F2B9000EAD0F8 /* Build configuration list for PBXNativeTarget "MesaPra4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00236B2C2F2B9000EAD0F8 /* Debug */,
+				AE00236C2C2F2B9000EAD0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE0023542C2F2B8E00EAD0F8 /* Project object */;
+}

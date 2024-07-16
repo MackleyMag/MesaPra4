@@ -65,4 +65,19 @@ extension UIColor {
         // Return the hex string
         return hexString
     }
+    
+    static func random() -> UIColor {
+        return UIColor(
+           red:   .random(),
+           green: .random(),
+           blue:  .random(),
+           alpha: 0.4
+        )
+    }
+}
+
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
 }

@@ -26,6 +26,7 @@
 		AE00238A2C37168100EAD0F8 /* PersonInTableExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0023892C37168100EAD0F8 /* PersonInTableExamples.swift */; };
 		AE00238C2C37179200EAD0F8 /* ItemInTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00238B2C37179200EAD0F8 /* ItemInTable.swift */; };
 		AE00238F2C37483200EAD0F8 /* OpenDiningTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00238E2C37483200EAD0F8 /* OpenDiningTableItem.swift */; };
+		AEEEA1A62C4707D800C5CFB5 /* NewPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEEA1A52C4707CA00C5CFB5 /* NewPersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		AE0023892C37168100EAD0F8 /* PersonInTableExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInTableExamples.swift; sourceTree = "<group>"; };
 		AE00238B2C37179200EAD0F8 /* ItemInTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInTable.swift; sourceTree = "<group>"; };
 		AE00238E2C37483200EAD0F8 /* OpenDiningTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDiningTableItem.swift; sourceTree = "<group>"; };
+		AEEEA1A52C4707CA00C5CFB5 /* NewPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		AE0023922C3DB20D00EAD0F8 /* PeopleView */ = {
 			isa = PBXGroup;
 			children = (
+				AEEEA1A52C4707CA00C5CFB5 /* NewPersonView.swift */,
 			);
 			path = PeopleView;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEEA1A62C4707D800C5CFB5 /* NewPersonView.swift in Sources */,
 				AE0023842C3480DC00EAD0F8 /* PersonInTable.swift in Sources */,
 				AE00237E2C31D55900EAD0F8 /* OpenDiningTable.swift in Sources */,
 				AE00237C2C2F3EE500EAD0F8 /* DiningTableListComponent.swift in Sources */,

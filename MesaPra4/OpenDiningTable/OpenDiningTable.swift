@@ -10,6 +10,9 @@ import SwiftData
 
 struct OpenDiningTable: View {
     let diningTable: DiningTable
+    @State private var selectedTab = 0
+    @State private var showNewItem = false
+    @State private var showNewPerson = false
     
     var body: some View {
         VStack {
@@ -51,55 +54,62 @@ struct OpenDiningTable: View {
             .background(diningTable.hexColor)
             
             VStack {
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Consumo")
-                        Divider()
-                            .background(Color.red)
-                            .frame(width: 60)
-                    }
-                    Spacer()
-                    Divider()
-                        .frame(height: 30)
-                    Spacer()
-                    VStack {
-                        Text("Pessoas")
-                        Divider()
-                            .background(Color.secondary)
-                            .frame(width: 60)
-                    }
-                    Spacer()
-                }
+                Picker("", selection: $selectedTab){
+                    Text("Consumo").tag(0)
+                    Text("Pessoas").tag(1)
+                }.pickerStyle(SegmentedPickerStyle())
             }
+            .padding(.horizontal, 16)
             
             ZStack(alignment: .bottomTrailing) {
-                Group {
-                    if let diningItems = diningTable.diningItems, !diningItems.isEmpty {
-                        List {
-                            ForEach(diningItems) { item in
-                                OpenDiningTableListItem(dItem: item)
-                            }
-                        }
-                        .listStyle(.plain)
-                    } else {
-                        ContentUnavailableView("Agora que sua mesa está criada, adicione itens no botão azul", systemImage: "menucard")
-                    }
+                switch(selectedTab) {
+                case 1:
+                    PeopleInTableView(diningTable: diningTable)
+                default:
+                    ItensInTableView(diningTable: diningTable)
                 }
                 
-                Button {
-                    // Action
-                } label: {
-                    Image(systemName: "plus")
-                        .font(.title.weight(.semibold))
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                        .shadow(radius: 4, x: 0, y: 4)
-
+                HStack {
+                    Button {
+                        showNewItem.toggle()
+                    } label: {
+                        Text("Novo item")
+                        Image(systemName: "plus")
+                            .font(.body.weight(.semibold))
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 4, x: 0, y: 4)
+                        
+                    }
+                    .padding()
+                    .sheet(isPresented: $showNewItem) {
+                        NavigationStack {
+                            NewDiningItemView(diningTable: diningTable)
+                        }
+                    }
+                    Button {
+                        showNewPerson.toggle()
+                    } label: {
+                        Text("Nova Pessoa")
+                        Image(systemName: "plus")
+                            .font(.body.weight(.semibold))
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 4, x: 0, y: 4)
+                        
+                    }
+                    .padding()
+                    .sheet(isPresented: $showNewPerson) {
+                        NavigationStack {
+                            NewPersonView(diningTable: diningTable)
+                                .presentationDetents([.medium])
+                        }
+                    }
                 }
-                .padding()
             }
         }
     }
@@ -114,4 +124,42 @@ struct OpenDiningTable: View {
         OpenDiningTable(diningTable: dinningTable[0])
     }
     .modelContainer(preview.container)
+}
+
+struct ItensInTableView: View {
+    @State var diningTable: DiningTable
+    
+    var body: some View {
+        Group {
+            if let diningItems = diningTable.diningItems, !diningItems.isEmpty {
+                List {
+                    ForEach(diningItems) { item in
+                        OpenDiningTableListItem(dItem: item)
+                    }
+                }
+                .listStyle(.plain)
+            } else {
+                ContentUnavailableView("Agora que sua mesa está criada, adicione itens no botão azul", systemImage: "menucard")
+            }
+        }
+    }
+}
+
+struct PeopleInTableView: View {
+    @State var diningTable: DiningTable
+    
+    var body: some View {
+        Group {
+            if let people = diningTable.peopleInTable, !people.isEmpty {
+                List {
+                    ForEach(people) { person in
+                        Text(person.personName)
+                    }
+                }
+                .listStyle(.plain)
+            } else {
+                ContentUnavailableView("Agora que sua mesa está criada, adicione pessoas no botão azul", systemImage: "person.3")
+            }
+        }
+    }
 }

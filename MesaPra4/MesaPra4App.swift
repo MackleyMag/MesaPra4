@@ -21,7 +21,7 @@ struct MesaPra4App: App {
     init() {
         let schema = Schema([DiningTable.self])
         let config = ModelConfiguration("PlayingWithSwiftData", schema: schema)
-        
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
         do {
             container = try ModelContainer(for: schema, configurations: config)
         } catch {

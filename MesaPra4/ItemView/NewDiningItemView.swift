@@ -22,53 +22,48 @@ struct NewDiningItemView: View {
     
     var body: some View {
         
-        NavigationStack {
-            Form {
-                VStack(alignment: .leading) {
-                    Text("Nome do item")
-                    TextField("Coca cola latinha", text: $itemName)
+        Form {
+            VStack(alignment: .leading) {
+                Text("Nome do item")
+                TextField("Coca cola latinha", text: $itemName)
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Valor do item")
+                TextField("R$ 10,00", value: $itemPrice, format: .currency(code: Locale.current.currency?.identifier ?? "BRL"))
+                    .keyboardType(.decimalPad)
+            }
+            Picker(selection: $itemType, label: Text("Categoria do item")) {
+                ForEach(DiningItemType.allCases , id: \.id) { item in
+                    Label(title: { Text(item.descr) },
+                          icon: { Image(systemName: item.icon) }
+                    ).tag(item.id)
+                        .foregroundStyle(.primary)
                 }
-                
-                VStack(alignment: .leading) {
-                    Text("Valor do item")
-                    TextField("R$ 10,00", value: $itemPrice, format: .currency(code: Locale.current.currency?.identifier ?? "BRL"))
-                        .keyboardType(.decimalPad)
-                }
-                Picker(selection: $itemType, label: Text("Categoria do item")) {
-                    ForEach(DiningItemType.allCases , id: \.id) { item in
-                        Label(title: { Text(item.descr) },
-                              icon: { Image(systemName: item.icon) }
-                        ).tag(item.id)
-                            .foregroundStyle(.primary)
-                    }
-                }.pickerStyle(.inline)
-                
-                Section(header: Text("Quem dividirá este item?"),
-                        footer: Text("Você pode escolher as pessoas que dividirão este item mais tarde tocando nele na lista anterior")) {
-                    NavigationLink {
-                        MultiSelectPickerView(allItems: ["Ana", "Joao", "Ferdinando"], selectedItems: $peopleSelected)
-                            .navigationTitle("Escolha as pessoas")
-                    } label: {
-                        HStack {
-                            Text("Pessoas selecionadas:")
-                                .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
-                            Spacer()
-                            Image(systemName: "\($peopleSelected.count).circle")
-                                .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
-                                .font(.title2)
-                        }
+            }.pickerStyle(.inline)
+            
+            Section(header: Text("Quem dividirá este item?"),
+                    footer: Text("Você pode escolher as pessoas que dividirão este item mais tarde tocando nele na lista anterior")) {
+                NavigationLink {
+                    MultiSelectPickerView(allItems: ["Ana", "Joao", "Ferdinando"], selectedItems: $peopleSelected)
+                        .navigationTitle("Escolha as pessoas")
+                } label: {
+                    HStack {
+                        Text("Pessoas selecionadas:")
+                            .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
+                        Spacer()
+                        Image(systemName: "\($peopleSelected.count).circle")
+                            .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
+                            .font(.title2)
                     }
                 }
             }
-            .navigationTitle("Novo item")
         }
+        .navigationTitle("Novo item")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Criar") {
-                    let item = DiningItem(itemName: itemName,
-                                          itemPrice: itemPrice!,
-                                          itemType: itemType.rawValue)
-                    diningTable.diningItems?.append(item)
+                    createNewItem()
                     itemName = ""
                     itemPrice = nil
                     dismiss()
@@ -88,6 +83,20 @@ struct NewDiningItemView: View {
         return true
     }
     
+    fileprivate func createNewItem() {
+        if let hasDiningItens = diningTable.diningItems, !hasDiningItens.isEmpty {
+            let item = DiningItem(itemName: itemName,
+                                  itemPrice: itemPrice!,
+                                  itemType: itemType.rawValue)
+            diningTable.diningItems?.append(item)
+        } else {
+            let item = DiningItem(itemName: itemName,
+                                  itemPrice: itemPrice!,
+                                  itemType: itemType.rawValue)
+            modelContext.insert(item)
+            diningTable.diningItems?.insert(item, at: 0)
+        }
+    }
 }
 
 #Preview {

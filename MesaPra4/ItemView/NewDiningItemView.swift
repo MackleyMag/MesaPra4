@@ -18,7 +18,7 @@ struct NewDiningItemView: View {
     @State private var itemPrice: Decimal?
     @State private var itemType: DiningItemType = .snack
     
-    @State private var peopleSelected: [String] = []
+    @State private var peopleSelected: [PersonInTable] = []
     
     var body: some View {
         
@@ -42,19 +42,24 @@ struct NewDiningItemView: View {
                 }
             }.pickerStyle(.inline)
             
-            Section(header: Text("Quem dividirá este item?"),
-                    footer: Text("Você pode escolher as pessoas que dividirão este item mais tarde tocando nele na lista anterior")) {
-                NavigationLink {
-                    MultiSelectPickerView(allItems: ["Ana", "Joao", "Ferdinando"], selectedItems: $peopleSelected)
-                        .navigationTitle("Escolha as pessoas")
-                } label: {
-                    HStack {
-                        Text("Pessoas selecionadas:")
-                            .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
-                        Spacer()
-                        Image(systemName: "\($peopleSelected.count).circle")
-                            .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
-                            .font(.title2)
+            
+            if let peopleInTable = diningTable.peopleInTable {
+                Section(header: Text("Quem dividirá este item?"),
+                        footer: Text("Você pode escolher as pessoas que dividirão este item mais tarde tocando nele na lista anterior.")) {
+                    NavigationLink {
+                        //                    if let peopleInTable = diningTable.peopleInTable {
+                        MultiSelectPickerView(allPeople: peopleInTable, selectedPeople: $peopleSelected)
+                            .navigationTitle("Escolha as pessoas")
+                        //                    }
+                    } label: {
+                        HStack {
+                            Text("Pessoas selecionadas:")
+                                .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
+                            Spacer()
+                            Image(systemName: "\($peopleSelected.count).circle")
+                                .foregroundColor(Color(red: 0.4192, green: 0.2358, blue: 0.3450))
+                                .font(.title2)
+                        }
                     }
                 }
             }
@@ -88,11 +93,17 @@ struct NewDiningItemView: View {
             let item = DiningItem(itemName: itemName,
                                   itemPrice: itemPrice!,
                                   itemType: itemType.rawValue)
+            if peopleSelected != [] {
+                item.people = peopleSelected
+            }
             diningTable.diningItems?.append(item)
         } else {
             let item = DiningItem(itemName: itemName,
                                   itemPrice: itemPrice!,
                                   itemType: itemType.rawValue)
+            if peopleSelected != [] {
+                item.people = peopleSelected
+            }
             modelContext.insert(item)
             diningTable.diningItems?.insert(item, at: 0)
         }

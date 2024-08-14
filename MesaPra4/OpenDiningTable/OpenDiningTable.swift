@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct OpenDiningTable: View {
+    @Environment(\.modelContext) private var context
+    
     let diningTable: DiningTable
     @State private var selectedTab = 0
     @State private var showNewItem = false
@@ -154,6 +156,12 @@ struct PeopleInTableView: View {
                 List {
                     ForEach(people) { person in
                         Text(person.personName)
+                    }
+                }
+                .onDelete { indexSet in
+                    indexSet.forEach { index in
+                        let book = diningTable.peopleInTable[index]
+                        context.delete(book)
                     }
                 }
                 .listStyle(.plain)

@@ -9,29 +9,29 @@ import SwiftUI
 
 struct MultiSelectPickerView: View {
     // The list of items we want to show
-    @State var allItems: [String]
+    @State var allPeople: [PersonInTable]
     
     // Binding to the selected items we want to track
-    @Binding var selectedItems: [String]
+    @Binding var selectedPeople: [PersonInTable]
     
     var body: some View {
         Form {
             List {
-                ForEach(allItems, id: \.self) { item in
+                ForEach(allPeople, id: \.self) { item in
                     Button(action: {
                         withAnimation {
-                            if self.selectedItems.contains(item) {
+                            if self.selectedPeople.contains(item) {
                                 // Previous comment: you may need to adapt this piece
-                                self.selectedItems.removeAll(where: { $0 == item })
+                                self.selectedPeople.removeAll(where: { $0 == item })
                             } else {
-                                self.selectedItems.append(item)
+                                self.selectedPeople.append(item)
                             }
                         }
                     }) {
                         HStack {
                             Image(systemName: "checkmark")
-                                .opacity(self.selectedItems.contains(item) ? 1.0 : 0.0)
-                            Text(item)
+                                .opacity(self.selectedPeople.contains(item) ? 1.0 : 0.0)
+                            Text(item.personName)
                         }
                     }
                     .foregroundColor(.primary)
